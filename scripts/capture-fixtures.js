@@ -50,9 +50,9 @@ if (!SELECTED.length) {
 }
 
 const PLAYWRIGHT = process.env.IMDB_ENH_PLAYWRIGHT
-    || 'C:/Users/--/AppData/Local/npm-cache/_npx/9833c18b2d85bc59/node_modules/playwright/index.js';
+    || 'C:/Users/dev/AppData/Local/npm-cache/_npx/9833c18b2d85bc59/node_modules/playwright/index.js';
 const CHROMIUM = process.env.IMDB_ENH_CHROMIUM
-    || 'C:/Users/--/AppData/Local/ms-playwright/chromium-1234/chrome-win64/chrome.exe';
+    || 'C:/Users/dev/AppData/Local/ms-playwright/chromium-1234/chrome-win64/chrome.exe';
 
 /* Runs in the page. Passed as a function rather than a string so it is not re-parsed
    twice on the way there — an earlier version went through eval() and silently produced

@@ -24,9 +24,9 @@ const path = require('path');
 const root = path.resolve(__dirname, '..');
 const outputDir = path.join(root, 'design', 'surfaces');
 const PLAYWRIGHT = process.env.IMDB_ENH_PLAYWRIGHT
-    || 'C:/Users/--/AppData/Local/npm-cache/_npx/9833c18b2d85bc59/node_modules/playwright/index.js';
+    || 'C:/Users/dev/AppData/Local/npm-cache/_npx/9833c18b2d85bc59/node_modules/playwright/index.js';
 const CHROMIUM = process.env.IMDB_ENH_CHROMIUM
-    || 'C:/Users/--/AppData/Local/ms-playwright/chromium-1234/chrome-win64/chrome.exe';
+    || 'C:/Users/dev/AppData/Local/ms-playwright/chromium-1234/chrome-win64/chrome.exe';
 
 const THEMES = ['dark', 'oled', 'midnight', 'light', 'highContrast'];
 
