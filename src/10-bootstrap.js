@@ -1910,7 +1910,7 @@
         // taste and should be asked for.
         dimLowRated: false, dimRatingThreshold: '6.0',
         // Theme
-        themeVariant: 'dark', // dark | oled | midnight | light | highContrast
+        themeVariant: 'dark', // dark | oled | midnight | light | highContrast | end4
         themeAuto: false,
         // Sections
         collapsibleSections: true, expandSummaries: false, sectionCollapseState: {}, spoilerBlur: false, quickNav: true,

@@ -14,6 +14,30 @@
 
 # IMDb Enhanced
 
+## End-4 / Material You fork (experimental)
+
+This fork adds an optional **End-4 / Material You** palette mode that follows
+the wallpaper-driven colors supplied by the existing local end-4 palette bridge.
+It retains the original themes and preserves IMDb's yellow brand accents.
+
+**To test:** Disable other IMDb Stylus overrides and any other IMDb Enhanced
+userscript. Keep the previously installed end-4 IMDb palette userscript enabled.
+Install the userscript from the
+[feature branch](https://raw.githubusercontent.com/tovakai/IMDb_Enhanced/feature/end4-material-you/IMDb_Enhanced.user.js)
+in Violentmonkey. Open an IMDb title page, click the IMDb Enhanced settings gear,
+and select **End-4 / Material You** under Appearance. Turn off "Follow system
+theme" to keep that manual selection. A wallpaper change should update an
+already-open tab through CSS variables, without reinjecting the stylesheet.
+
+The palette bridge sets `--e4-bg`, `--e4-panel`, `--e4-raised`,
+`--e4-sidebar`, `--e4-text`, `--e4-muted`, and `--e4-accent` on the
+document root. Standalone fallback colors are provided if it is missing.
+No vault data or OS files are accessed by this fork itself.
+
+This development branch is separate from the upstream
+[IMDb Enhanced](https://github.com/SysAdminDoc/IMDb_Enhanced) project.
+Keep upstream attribution and the MIT license when distributing modified builds.
+
 A desktop IMDb overhaul delivered as a single userscript and a Chromium Manifest V3 extension. Cleaner pages, modern themes, aggregated scores from Rotten Tomatoes, Letterboxd, and Metacritic, streaming site quick-search, Radarr/Sonarr integration, Plex/Jellyfin/Emby library indicators, and more.
 
 ## Features

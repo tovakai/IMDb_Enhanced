@@ -1,9 +1,9 @@
 // ==UserScript==
-// @name         IMDb Enhanced
-// @namespace    https://github.com/SysAdminDoc
+// @name         IMDb Enhanced (end-4)
+// @namespace    https://github.com/tovakai
 // @version      2.22.0
-// @updateURL    https://raw.githubusercontent.com/SysAdminDoc/IMDb_Enhanced/main/IMDb_Enhanced.user.js
-// @downloadURL  https://raw.githubusercontent.com/SysAdminDoc/IMDb_Enhanced/main/IMDb_Enhanced.user.js
+// @updateURL    https://raw.githubusercontent.com/tovakai/IMDb_Enhanced/feature/end4-material-you/IMDb_Enhanced.user.js
+// @downloadURL  https://raw.githubusercontent.com/tovakai/IMDb_Enhanced/feature/end4-material-you/IMDb_Enhanced.user.js
 // @description  Premium IMDb overhaul: cleaner pages, modern themes, refined score widgets, media library indicators, quick navigation, richer external links, TV tools, search shortcuts, and polished settings import/export
 // @author       SysAdminDoc
 // @match        https://www.imdb.com/title/*

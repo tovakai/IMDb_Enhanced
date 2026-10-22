@@ -1,9 +1,9 @@
 // ==UserScript==
-// @name         IMDb Enhanced
-// @namespace    https://github.com/SysAdminDoc
+// @name         IMDb Enhanced (end-4)
+// @namespace    https://github.com/tovakai
 // @version      2.22.0
-// @updateURL    https://raw.githubusercontent.com/SysAdminDoc/IMDb_Enhanced/main/IMDb_Enhanced.user.js
-// @downloadURL  https://raw.githubusercontent.com/SysAdminDoc/IMDb_Enhanced/main/IMDb_Enhanced.user.js
+// @updateURL    https://raw.githubusercontent.com/tovakai/IMDb_Enhanced/feature/end4-material-you/IMDb_Enhanced.user.js
+// @downloadURL  https://raw.githubusercontent.com/tovakai/IMDb_Enhanced/feature/end4-material-you/IMDb_Enhanced.user.js
 // @description  Premium IMDb overhaul: cleaner pages, modern themes, refined score widgets, media library indicators, quick navigation, richer external links, TV tools, search shortcuts, and polished settings import/export
 // @author       SysAdminDoc
 // @match        https://www.imdb.com/title/*
@@ -1968,7 +1968,7 @@
         // taste and should be asked for.
         dimLowRated: false, dimRatingThreshold: '6.0',
         // Theme
-        themeVariant: 'dark', // dark | oled | midnight | light | highContrast
+        themeVariant: 'dark', // dark | oled | midnight | light | highContrast | end4
         themeAuto: false,
         // Sections
         collapsibleSections: true, expandSummaries: false, sectionCollapseState: {}, spoilerBlur: false, quickNav: true,
@@ -6903,6 +6903,46 @@
             hdrBorder: 'rgba(120,160,255,0.05)',
             sT:     '#1c2444', sH: '#283460',
             quoteBar: '#5eaaff',
+        },
+        end4: {
+            // This is an optional live theme. The separate end-4 palette userscript
+            // writes these seven custom properties to :root. CSS var() references
+            // intentionally remain in the emitted styles, so wallpaper changes
+            // re-color an open tab without rebuilding or reinjecting the theme.
+            // Every role has a standalone fallback if the bridge is not running.
+            scheme: 'dark',
+            bg:     'var(--e4-bg, #161A26)',
+            sf0:    'var(--e4-panel, #202838)',
+            sf1:    'var(--e4-raised, #2A3549)',
+            sf2:    'color-mix(in srgb, var(--e4-raised, #2A3549) 88%, var(--e4-accent, #9DBBFF))',
+            bd0:    'color-mix(in srgb, var(--e4-muted, #A7B6D1) 14%, transparent)',
+            bd1:    'color-mix(in srgb, var(--e4-muted, #A7B6D1) 22%, transparent)',
+            bd2:    'color-mix(in srgb, var(--e4-muted, #A7B6D1) 34%, transparent)',
+            sh1:    '0 1px 3px rgba(0,0,0,.25), 0 1px 2px rgba(0,0,0,.18)',
+            sh2:    '0 4px 16px rgba(0,0,0,.34), 0 1px 4px rgba(0,0,0,.22)',
+            sh3:    '0 12px 40px rgba(0,0,0,.46), 0 2px 8px rgba(0,0,0,.28)',
+            tx0:    'var(--e4-text, #D9E2FF)',
+            tx1:    'var(--e4-text, #D9E2FF)',
+            tx2:    'var(--e4-muted, #A7B6D1)',
+            tx3:    'var(--e4-muted, #A7B6D1)',
+            // Preserve IMDb's brand and semantic rating colors; use the
+            // wallpaper accent for navigation, links, and focus-adjacent UI.
+            accent: '#f5c518',
+            accentMuted: 'rgba(245,197,24,0.12)',
+            accentBorder: 'rgba(245,197,24,0.20)',
+            blue:   'var(--e4-accent, #9DBBFF)',
+            blueHi: 'color-mix(in srgb, var(--e4-accent, #9DBBFF) 78%, white)',
+            blueMuted: 'color-mix(in srgb, var(--e4-accent, #9DBBFF) 12%, transparent)',
+            red:    '#e84057',
+            redMuted: 'rgba(232,64,87,0.10)',
+            green:  '#3dd68c',
+            heroScrim: 'color-mix(in srgb, var(--e4-bg, #161A26) 86%, transparent)',
+            scrim:  'color-mix(in srgb, var(--e4-bg, #161A26) 88%, black)',
+            hdr:    'color-mix(in srgb, var(--e4-sidebar, #111521) 90%, transparent)',
+            hdrBorder: 'color-mix(in srgb, var(--e4-muted, #A7B6D1) 14%, transparent)',
+            sT:     'var(--e4-panel, #202838)',
+            sH:     'var(--e4-raised, #2A3549)',
+            quoteBar: 'var(--e4-accent, #9DBBFF)',
         },
         light: {
             scheme: 'light',
@@ -17590,7 +17630,7 @@ ${scopedRules('.enh-zoom', {
 }
 
 /* ════ Theme Swatches ════ */
-.enh-theme-selector { display: grid; grid-template-columns: repeat(5, minmax(64px, 1fr)); gap: 12px; margin-top: 14px; }
+.enh-theme-selector { display: grid; grid-template-columns: repeat(3, minmax(64px, 1fr)); gap: 12px; margin-top: 14px; }
 .enh-theme-option { display: flex; flex-direction: column; gap: 6px; color: ${t.tx2}; font-size: 10px; text-align: center; }
 .enh-theme-swatch {
     width: 100%; height: 54px; border-radius: 10px; cursor: pointer;
@@ -19814,6 +19854,7 @@ ${scopedRules('.enh-zoom', {
             { id:'oled', color:'#000000', label:t('label_oled') },
             { id:'midnight', color:'#0a0e1c', label:t('label_midnight') },
             { id:'light', color:'#f6f7f9', label:t('label_light') },
+            { id:'end4', color:'linear-gradient(135deg,var(--e4-bg,#161A26) 0 55%,var(--e4-accent,#9DBBFF) 55% 100%)', label:'End-4 / Material You' },
             { id:'highContrast', color:'linear-gradient(135deg,#000 0 42%,#ffd400 42% 62%,#fff 62%)', label:t('label_high_contrast') },
         ].forEach(theme => {
             const swatch = makeEl('button', {
