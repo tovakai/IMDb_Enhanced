@@ -1010,7 +1010,7 @@ ${scopedRules('.enh-zoom', {
 }
 
 /* ════ Theme Swatches ════ */
-.enh-theme-selector { display: grid; grid-template-columns: repeat(5, minmax(64px, 1fr)); gap: 12px; margin-top: 14px; }
+.enh-theme-selector { display: grid; grid-template-columns: repeat(3, minmax(64px, 1fr)); gap: 12px; margin-top: 14px; }
 .enh-theme-option { display: flex; flex-direction: column; gap: 6px; color: ${t.tx2}; font-size: 10px; text-align: center; }
 .enh-theme-swatch {
     width: 100%; height: 54px; border-radius: 10px; cursor: pointer;

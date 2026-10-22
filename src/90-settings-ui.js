@@ -1728,6 +1728,7 @@
             { id:'oled', color:'#000000', label:t('label_oled') },
             { id:'midnight', color:'#0a0e1c', label:t('label_midnight') },
             { id:'light', color:'#f6f7f9', label:t('label_light') },
+            { id:'end4', color:'linear-gradient(135deg,var(--e4-bg,#161A26) 0 55%,var(--e4-accent,#9DBBFF) 55% 100%)', label:'End-4 / Material You' },
             { id:'highContrast', color:'linear-gradient(135deg,#000 0 42%,#ffd400 42% 62%,#fff 62%)', label:t('label_high_contrast') },
         ].forEach(theme => {
             const swatch = makeEl('button', {
